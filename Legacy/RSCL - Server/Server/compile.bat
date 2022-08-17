@@ -1,0 +1,2 @@
+ant compile_core
+ant runservermembers

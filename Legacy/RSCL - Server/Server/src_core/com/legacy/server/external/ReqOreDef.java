@@ -1,0 +1,30 @@
+package com.legacy.server.external;
+
+/**
+ * The definition wrapper for ores
+ */
+public class ReqOreDef {
+
+    /**
+     * The amount of the ore required
+     */
+    public int amount;
+    /**
+     * The id of the ore
+     */
+    public int oreId;
+
+    public ReqOreDef(int oreId, int amount) {
+		this.oreId = oreId;
+		this.amount = amount;
+	}
+
+	public int getAmount() {
+        return amount;
+    }
+
+    public int getId() {
+        return oreId;
+    }
+
+}

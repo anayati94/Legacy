@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<Configuration status="WARN" target="SYSTEM_ERR">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%t] [%logger{36}] %level: %msg%n</Pattern>
+			</PatternLayout>
+		</Console>
+		<RandomAccessFile name="RSCLegacy" fileName="logs/gameserver.log"
+			immediateFlush="false">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Pattern>
+			</PatternLayout>
+		</RandomAccessFile>
+	</Appenders>
+	<Loggers>
+		<Root level="ALL">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="RSCLegacy" level="error" />
+		</Root>
+	</Loggers>
+</Configuration>
